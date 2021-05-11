@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <div style="padding-left: 100px;">
+        <br><br>
+        <br><br>
+        <table class="table table-bordered" align="center">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Department</th>
+              <th>delete</th>
+              <th>edit</th>
+
+
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let emp of employee">
+              <td>{{emp.eid}}</td>
+              <td>{{emp.firstName}} &nbsp;&nbsp;&nbsp; {{ emp.lastName}}</td>
+
+              <td>{{emp.gender }}</td>
+              <td>{{emp.emailId }}</td>
+              <td>{{emp.depeartment }}</td>
+              <td><button class="btn btn-primary" (click)="deleteEmployee(emp.eid)">delete</button></td>
+              <td><button class="btn btn-success" (click)="editEmployee(emp.eid)">EDIT</button></td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-4">
+
+          <nav aria-label="...">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <span class="page-link">Previous</span>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active">
+                <span class="page-link">
+                  2
+                  <span class="sr-only"></span>
+                </span>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+    {{message}}
+  </div>
+</div>
